@@ -7,3 +7,10 @@
     max-width: 100rem;
     min-height: 100vh;
 }
+
+/*breakpoints*/
+@media (max-width: 800px) {
+    .intro-content h2 {
+        font-size: 4rem;
+    }
+}
