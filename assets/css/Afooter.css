@@ -1,0 +1,46 @@
+footer {
+    text-align: center;
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: var(--myPlaceholder-color);
+    color: var(--mySecondary-color);
+    height: 4rem;
+}
+
+.hearth {
+    color: red;
+
+    animation: pulse 1200ms infinite;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 0.6rem;
+    right: 1rem;
+    background-color: var(--mySecondary-color);
+    color: var(--myPrimary-color);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    /*using flex just to align center vertically*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
+    border: 0.1rem solid var(--myTable-Secondary-Grid-color);
+}
+
+@keyframes pulse {
+    0% {
+        font-size: 2rem;
+    }
+
+    70% {
+        font-size: 2rem;
+        text-shadow: 0px 0px 20px #880000;
+    }
+
+    100% {
+        font-size: 2rem;
+    }
+}

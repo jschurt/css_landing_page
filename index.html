@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Landing Page</title>
+
+        <!--Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--Site styles -->
+        <link href="assets/css/1variables.css" rel="stylesheet" />
+        <link href="assets/css/2elements.css" rel="stylesheet" />
+        <link href="assets/css/3menu.css" rel="stylesheet" />
+        <link href="assets/css/4home.css" rel="stylesheet" />
+        <link href="assets/css/5intro.css" rel="stylesheet" />
+        <link href="assets/css/6top3.css" rel="stylesheet" />
+        <link href="assets/css/7gallery.css" rel="stylesheet" />
+        <link href="assets/css/8pricing.css" rel="stylesheet" />
+        <link href="assets/css/9contact.css" rel="stylesheet" />
+        <link href="assets/css/Afooter.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Nav -->
+        <input
+            id="close-menu"
+            type="checkbox"
+            class="close-menu"
+            role="button"
+            aria-label="Close menu"
+        />
+        <label
+            for="close-menu"
+            class="close-menu-label"
+            title="close menu"
+        ></label>
+        <aside class="menu secondary-bg">
+            <div class="content menu-content">
+                <h1 onclick="getElementById('close-menu').checked = false;">
+                    <a href="#home">Logo</a>
+                </h1>
+
+                <nav>
+                    <ul onclick="getElementById('close-menu').checked = false;">
+                        <li><a href="#intro">intro</a></li>
+                        <li><a href="#top3">top 3</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                        <li><a href="#pricing">pricing</a></li>
+                        <li><a href="#contact">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!--home Page-->
+        <section id="home" class="primary-bg mySection">
+            <div class="content home-content">
+                <div class="home-text-content">
+                    <h2>January Brings us Firefox 85</h2>
+                    <p>
+                        To wrap up January, we are proud to bring you the
+                        release of Firefox 85. In this version we are bringing
+                        you support for the :focus-visible pseudo-class in CSS
+                        and associated devtools, and the complete removal of
+                        Flash support from Firefox.
+                    </p>
+                </div>
+                <div class="home-img-content">
+                    <img
+                        src="./assets/img/javascript_img.svg"
+                        alt="html, js and css logos"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!--intro Page-->
+        <section id="intro" class="secondary-bg mySection">
+            <div class="content intro-content">
+                <h2>Introduction</h2>
+                <p>
+                    The release of Apple Silicon-based Macs at the end of last
+                    year generated a flurry of news coverage and some surprises
+                    at the machine’s performance. This post details some
+                    background information on the experience of porting Firefox
+                    to run natively on these CPUs.
+                </p>
+                <p>
+                    We’ll start with some background on the Mac transition and
+                    give an overview of Firefox internals that needed to know
+                    about the new architecture, before moving on to the concept
+                    of Universal Binaries.
+                </p>
+                <p>
+                    We’ll then explain how DRM/EME works on the new platform,
+                    talk about our experience with macOS Big Sur, and discuss
+                    various updater problems we had to deal with. We’ll conclude
+                    with the release and an overview of various other
+                    improvements that are in the pipeline.
+                </p>
+            </div>
+        </section>
+
+        <!--top3 Page-->
+        <section id="top3" class="primary-bg mySection">
+            <div class="content top3-content">
+                <h2 class="top3-content-header">Top 3 Jobs</h2>
+                <p class="top3-content-description">
+                    No single job suits all of us, but many of the best ones
+                    have a few attributes in common: They pay well, challenge us
+                    year after year, match our talents and skills, aren't too
+                    stressful, offer room to advance throughout our careers, and
+                    provide a satisfying work-life balance. Whether the position
+                    is in demand is also a consideration among job seekers. U.S.
+                    News uses these qualities to rank the 3 Best Jobs of 2021.
+                </p>
+                <div class="top3-grid">
+                    <article>
+                        <h3>Physicians</h3>
+                        <p>
+                            Physicians provide preventative care but also treat
+                            and diagnose a range of illnesses in their patients.
+                            Schooling and competition is intense for all types
+                            of doctors but the payoff is high.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Software Developer</h3>
+                        <p>
+                            Software developers need to be innovative, creative
+                            and, of course, technical in order to succeed in
+                            this field. They might write new code or fix bugs in
+                            code to make it work better.
+                        </p>
+                    </article>
+                    <article>
+                        <h3>Nurce practitioners</h3>
+                        <p>
+                            Nurse practitioners perform a lot of the same duties
+                            as physicians; they perform physical exams, order
+                            lab tests and analyze results, prescribe medicines
+                            and authorize treatments.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--gallery Page-->
+        <section id="gallery" class="secondary-bg mySection">
+            <div class="content gallery-content">
+                <h2 class="gallery-content-header">Gallery</h2>
+                <p class="gallery-content-description">My favorite gallery.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?1"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?2"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?3"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?4"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?5"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?6"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?7"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                    <div class="gallery-img">
+                        <img
+                            src="https://source.unsplash.com/random/180x180?8"
+                            alt="random image from unsplash"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--work Page-->
+        <section id="pricing" class="primary-bg mySection">
+            <div class="content pricing-content">
+                <h2>Pricing</h2>
+                <p>
+                    Dr. Christiane’s pricing philosophy has developed over her
+                    28 years in practice. Our goal is to provide exceptional
+                    medicine at a reasonable price. Clients often call and ask
+                    for prices, so we’ve listed some of the prices below.
+                </p>
+
+                <div class="pricing-table-responsive">
+                    <table>
+                        <caption>
+                            Pricing table
+                        </caption>
+
+                        <thead>
+                            <tr>
+                                <th>Product/Service</th>
+                                <th>Dogs</th>
+                                <th>Cats</th>
+                                <th>Other</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Grooming and Bathing</td>
+                                <td class="td-value">20.00</td>
+                                <td class="td-value">10.00</td>
+                                <td class="td-value">-</td>
+                            </tr>
+                            <tr>
+                                <td>Ultrasound</td>
+                                <td class="td-value">800.00</td>
+                                <td class="td-value">600.00</td>
+                                <td class="td-value">-</td>
+                            </tr>
+                            <tr>
+                                <td>X-Rays</td>
+                                <td colspan="3" class="td-value">80.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!--contact Page-->
+        <section id="contact" class="secondary-bg mySection">
+            <div class="content contact-content">
+                <div class="home-text-content">
+                    <h2>Contact Us</h2>
+                    <p>
+                        Do you have questions or want to learn more about Kennel
+                        Vet? We value customer feedback, please use the form
+                        below to contact us.
+                    </p>
+                </div>
+                <div class="home-img-content">
+                    <img src="./assets/img/contact_us.svg" alt="contact us" />
+                </div>
+
+                <div class="contact-form">
+                    <fieldset class="contact-form-grid">
+                        <legend>Contact me</legend>
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input
+                                type="text"
+                                id="first-name"
+                                name="first-name"
+                                placeholder="Your name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input
+                                type="text"
+                                id="last-name"
+                                name="last-name"
+                                placeholder="Your last name"
+                            />
+                        </div>
+                        <div class="form-group group-fullwidth">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                            />
+                        </div>
+                        <div class="form-group group-fullwidth">
+                            <label for="message">Message</label>
+                            <textarea
+                                type="text"
+                                id="message"
+                                name="message"
+                                placeholder="Your message"
+                            ></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                Made with <span class="hearth">&#10084;</span> by Julio Schurt
+            </div>
+        </footer>
+
+        <a class="back-to-top" href="#">➔</a>
+    </body>
+</html>

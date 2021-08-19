@@ -1,0 +1,55 @@
+.top3-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.top3-content-header {
+    margin-bottom: 1rem;
+}
+
+.top3-content-description {
+    margin-bottom: 4rem;
+}
+
+.top3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--myGap);
+    /*creating my counter*/
+    counter-reset: myGridCounter;
+}
+
+.top3-grid h3 {
+    font-size: 3rem;
+    line-height: 1;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+    /*position relative to "hold" the counter numbers class below*/
+    position: relative;
+}
+
+.top3-grid h3::before {
+    /*using my counter*/
+    counter-increment: myGridCounter;
+    content: counter(myGridCounter);
+    position: absolute;
+    top: -2rem;
+    left: -0.5rem;
+    font-size: 7rem;
+    transform: rotate(10deg);
+}
+
+.top3-grid p {
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+/*breakpoints*/
+@media (max-width: 800px) {
+    .top3-grid {
+        /*breaking to use just one column*/
+        grid-template-columns: 1fr;
+    }
+}

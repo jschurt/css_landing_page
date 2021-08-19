@@ -1,0 +1,25 @@
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--myGap);
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-text-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-img-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*breakpoints*/
+@media (max-width: 800px) {
+    .home-content {
+        /*breaking to use just one column*/
+        grid-template-columns: 1fr;
+    }
+}

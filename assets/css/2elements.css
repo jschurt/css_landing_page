@@ -1,0 +1,112 @@
+/* === Initializing (zerando) styles ======*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*
+        Setando font-size em 62.5 para 
+        utilizar "rem" como unidade de medida.
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    color: var(--myPrimary-color);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5.5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 4.5rem;
+}
+
+h4 {
+    font-size: 4rem;
+}
+
+h5 {
+    font-size: 3.5rem;
+}
+
+h6 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    resize: none;
+}
+
+/* === Common Section style ==================*/
+
+.mySection {
+    /*Fill all viewport vertically*/
+    min-height: 100vh;
+}
+
+/* === Menu space ==================*/
+.menu-spacing {
+    height: 6.5rem;
+}
+
+/* === Main Section style ==================*/
+
+.content {
+    /*defining max-width to limit width in big screens */
+    max-width: 120rem;
+    /*centralizing content horizontally*/
+    margin: 0 auto;
+    padding: 8rem var(--myGap);
+}
+
+/* === Primary Section style ==================*/
+
+.primary-bg {
+    /*url relative css folder */
+    background-image: url(../img/mainbg.svg);
+    background-size: cover;
+    background-position: center center;
+    color: var(--myFont-color);
+}
+
+/* === Secondary Section style ==================*/
+
+.secondary-bg {
+    /*url relative css folder */
+    background-color: var(--mySecondary-color);
+    color: var(--myPrimary-color);
+}

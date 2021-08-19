@@ -1,0 +1,83 @@
+.contact-content {
+    display: grid;
+    grid-template-columns: 0.7fr 1.5fr;
+    gap: var(--myGap);
+    min-height: 100vh;
+}
+
+.contact-content .contact-form {
+    /*indicating that second row will use 2 cols */
+    grid-column: span 2;
+}
+
+.contact-form .contact-form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--myGap);
+}
+
+.contact-form .contact-form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-content .form-group {
+    /*when the form group width < 32rem (320px) the fields stay one column*/
+    flex: 1 1 32rem;
+}
+
+.contact-content .form-group label {
+    /*break line label/input*/
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.contact-content .form-group ::placeholder {
+    color: var(--myPlaceholder-color);
+}
+
+.contact-content .form-group input,
+.contact-content .form-group textarea {
+    border: 1px solid var(myPrimary-color);
+    background-color: var(--myFont-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.contact-content .form-group input:focus,
+.contact-content .form-group textarea:focus {
+    box-shadow: 0px 0px 5px 1pxs var(--myPrimary-color);
+}
+
+.contact-content .form-group button {
+    border: 0.5rem solid var(--myPrimary-color);
+    color: var(--myPrimary-color);
+    background: none;
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.contact-content .form-group button:hover {
+    color: var(--mySecondary-color);
+    background: var(--myPrimary-color);
+}
+
+.contact-content .group-fullwidth {
+    /* element fill one row*/
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+/*breakpoints*/
+@media (max-width: 800px) {
+    .contact-content {
+        /*breaking to use just one column and hide the image*/
+        grid-template-columns: 1fr 0fr;
+    }
+}

@@ -1,0 +1,23 @@
+/* === Creating css variables =============*/
+/*
+    The easiest way to manage your CSS vars 
+    is by declaring them into the :root 
+    pseudo-class. Given the fact that the 
+    CSS variables follow the rules like any 
+    other CSS definition, having them in the 
+    :root will ensure that all selectors will 
+    gain access to these variables.
+*/
+
+:root {
+    --myPrimary-color: #0a1128;
+    --myFont-color: white;
+    --mySecondary-color: white;
+    --myMenu-BottomLine-color: #eee;
+    --myMenu-SelectedItem-Bottom-color: crimson;
+    --myTable-Secondary-Grid-color: #555;
+    --myPlaceholder-color: #aaa;
+
+    /*Defines standard spacing*/
+    --myGap: 3rem;
+}

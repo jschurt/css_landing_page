@@ -1,0 +1,123 @@
+/* === Menu style ============================*/
+
+.menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.1rem solid var(--myMenu-BottomLine-color);
+}
+
+.menu-content {
+    /*Display elements horizontaly.*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*vertical center*/
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--myPrimary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--myPrimary-color);
+    position: relative;
+}
+
+/* menu mouse over efect */
+
+.menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 1.1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--myMenu-SelectedItem-Bottom-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+/*open close menu fixing top left position*/
+.close-menu {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/*breakpoints*/
+@media (max-width: 800px) {
+    .menu {
+        /*menu uses all screen*/
+        bottom: 0;
+        text-align: center;
+        /*hiding menu*/
+        display: none;
+    }
+
+    .menu-content {
+        /*Display elements vertically.*/
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .menu ul {
+        /*Display elements vertically.*/
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*open close menu fixing top right position*/
+    .close-menu-label::after {
+        content: "≡";
+        position: fixed;
+        z-index: 2;
+        top: 0.2rem;
+        right: 2rem;
+        font-size: 4rem;
+
+        background-color: var(--myPrimary-color);
+        color: var(--mySecondary-color);
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+
+        cursor: pointer;
+    }
+
+    .close-menu:checked ~ .menu {
+        display: block;
+    }
+
+    .close-menu:checked ~ .close-menu-label::after {
+        content: "×";
+    }
+}
